@@ -1,7 +1,13 @@
 package org.example;
 
+import org.calculadora.app.Aplicativo;
+import org.calculadora.operacoes.OperacoesBasicas;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+
+        Aplicativo app = new Aplicativo();
+
+        app.exibirCalculadora();
     }
 }
