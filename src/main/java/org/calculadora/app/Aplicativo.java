@@ -6,38 +6,40 @@ import java.util.Scanner;
 
 public class Aplicativo {
     Scanner scanner;
-    public Aplicativo(){
+
+    public Aplicativo() {
         this.scanner = new Scanner(System.in);
     }
+
     public Double escolherNumeroUm(Scanner scanner) {
         System.out.print("Digite o primeiro número: ");
         double numeroUm = scanner.nextDouble();
         return numeroUm;
     }
 
-    public Double  escolherNumeroDois(Scanner scanner) {
+    public Double escolherNumeroDois(Scanner scanner) {
         System.out.print("Digite o segundo número: ");
         double numeroDois = scanner.nextDouble();
         return numeroDois;
     }
 
-    public Double calcula(double primeiroNumero, double segundoNumero, int opcao){
+    public Double calcula(double primeiroNumero, double segundoNumero, int opcao) {
         double resultado = 0;
-        switch(opcao){
+        switch (opcao) {
             case 1:
-                System.out.println("Prabéns, você fez uma adição!");
+                System.out.println("Parabéns, você fez uma adição!");
                 resultado = OperacoesBasicas.adicao(primeiroNumero, segundoNumero);
                 break;
             case 2:
-                System.out.println("Prabéns, você fez uma subtração!");
+                System.out.println("Parabéns, você fez uma subtração!");
                 resultado = OperacoesBasicas.subtracao(primeiroNumero, segundoNumero);
                 break;
             case 3:
-                System.out.println("Prabéns, você fez uma divisão!");
+                System.out.println("Parabéns, você fez uma divisão!");
                 resultado = OperacoesBasicas.divisao(primeiroNumero, segundoNumero);
                 break;
             case 4:
-                System.out.println("Prabéns, você fez uma multiplicação!");
+                System.out.println("Parabéns, você fez uma multiplicação!");
                 resultado = OperacoesBasicas.multiplicacao(primeiroNumero, segundoNumero);
                 break;
             default:
@@ -45,12 +47,13 @@ public class Aplicativo {
         }
         return resultado;
     }
-    public void exibirCalculadora(){
+
+    public void exibirCalculadora() {
         double numeroUm = 0;
         double numeroDois = 0;
         int opcao;
 
-        do{
+        do {
             System.out.println("Escolha uma operação entre dois números:");
             System.out.println("1. Soma");
             System.out.println("2. Subtração");
@@ -58,7 +61,7 @@ public class Aplicativo {
             System.out.println("4. Multiplicação");
             System.out.println("0. Fechar Calculadora");
             opcao = scanner.nextInt();
-            if (opcao < 5 && opcao != 0){
+            if (opcao < 5 && opcao != 0) {
                 numeroUm = escolherNumeroUm(scanner);
                 numeroDois = escolherNumeroDois(scanner);
 
@@ -66,6 +69,6 @@ public class Aplicativo {
 
             }
 
-        }while (opcao != 0);
+        } while (opcao != 0);
     }
 }

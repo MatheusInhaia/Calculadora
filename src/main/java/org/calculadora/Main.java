@@ -1,4 +1,4 @@
-package org.example;
+package org.calculadora;
 
 import org.calculadora.app.Aplicativo;
 import org.calculadora.operacoes.OperacoesBasicas;
